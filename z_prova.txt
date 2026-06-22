@@ -4,7 +4,18 @@
 - rest client
 - C# Dev Kit
 
--- Passo a passo
+
+-- TOMAR CUIDADO:
+- código abaixo antes do app.Run() no Program.cs
+	using (var scope = app.Services.CreateScope())
+	{
+    	var db = scope.ServiceProvider.GetRequiredService<AppDataContext>();
+    	db.Database.Migrate();
+	}
+- SEMPRE manter o passo a passo
+
+
+-- Passo a passo MINIMAL API
 - criar uma solution: "dotnet new sln -o MinhaSolucao"
 - criar a minimal api dentro da pasta sln: "dotnet new web -n MinimalApiProject"
 - adicionar a api à sln: "dotnet sln add MinimalApiProject"
@@ -20,3 +31,10 @@
 	"dotnet ef database update"
 - configurar o Program com base no github do professor
 	mudando o nome de partes específicas
+- ajeitar o testes.http para fazer as requisições corretas
+
+
+-- Passo a passo REACT
+- dentro da pasta da solução e fora da API, colocar no powershell:
+	"npx create-react-app my-app --template typescript" - "my app" é o nome do react la, pode ser "front" tb
+- ajeitar os arquivos usando o GitHub do professor como base
