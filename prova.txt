@@ -1,0 +1,22 @@
+--- MINIMAL API
+
+-- coisas pra colocar no vscode:
+- rest client
+- C# Dev Kit
+
+-- Passo a passo
+- criar uma solution: "dotnet new sln -o MinhaSolucao"
+- criar a minimal api dentro da pasta sln: "dotnet new web -n MinimalApiProject"
+- adicionar a api à sln: "dotnet sln add MinimalApiProject"
+- adicionar os frameworks no projeto:
+	"dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 8.0.28"
+	"dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.28"
+- criar e configurar os arquivos e pastas (usando como base o Ecommerce do github do professor)
+	Data - AppDataContext.cs
+	Models - Livro.cs
+- criar as migrações e banco de dados
+	"dotnet ef migrations add InitialCreate"
+	caso o de cima nao de certo faça esse primeiro: "dotnet tool install --global dotnet-ef"
+	"dotnet ef database update"
+- configurar o Program com base no github do professor
+	mudando o nome de partes específicas

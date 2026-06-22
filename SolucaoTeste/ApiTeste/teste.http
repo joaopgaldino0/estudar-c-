@@ -1,0 +1,30 @@
+### Teste para a raiz da API
+GET http://localhost:5273
+
+### Listar produtos
+GET http://localhost:5273/apiteste/livros/listar
+
+### Deletar da lista
+DELETE http://localhost:5273/apiteste/livros/deletar/63d202c6-04b2-43a4-aae0-fb3dcb4f87bb
+
+### Cadastrar produto
+POST http://localhost:5273/apiteste/livros/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Thiago Kauan",
+    "autor" : "Marcelo da Silva",
+    "preco" : 100
+}
+
+### Emprestar livro
+PUT http://localhost:5273/apiteste/livros/emprestar/63d202c6-04b2-43a4-aae0-fb3dcb4f87bb
+
+### Devolver livro
+PUT http://localhost:5273/apiteste/livros/devolver/63d202c6-04b2-43a4-aae0-fb3dcb4f87bb
+
+### Livros disponíveis
+GET http://localhost:5273/apiteste/livros/disponiveis
+
+### Livros emprestados
+GET http://localhost:5273/apiteste/livros/emprestados
