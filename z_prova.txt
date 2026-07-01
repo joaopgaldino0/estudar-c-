@@ -13,6 +13,7 @@
     	db.Database.Migrate();
 	}
 - SEMPRE manter o passo a passo
+- logar certo no GitHub na hora de dar "git push"
 
 
 -- Passo a passo MINIMAL API
