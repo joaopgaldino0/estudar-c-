@@ -37,4 +37,5 @@
 -- Passo a passo REACT
 - dentro da pasta da solução e fora da API, colocar no powershell:
 	"npx create-react-app my-app --template typescript" - "my app" é o nome do react la, pode ser "front" tb
+	"npm install axios" - instala o axios
 - ajeitar os arquivos usando o GitHub do professor como base

@@ -1,0 +1,33 @@
+### Teste para a raiz da API
+GET http://localhost:5195
+
+### Listar livros
+GET http://localhost:5195/apiteste/livros/listar
+
+### Deletar da lista
+DELETE http://localhost:5195/apiteste/livros/deletar/83d0f93b-4fae-4e3b-bc62-3ff656fea2bc
+
+### Cadastrar livro
+POST http://localhost:5195/apiteste/livros/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Teste",
+    "autor" : "Testador",
+    "preco" : 100
+}
+
+### Emprestar livro
+PUT http://localhost:5195/apiteste/livros/emprestar/83d0f93b-4fae-4e3b-bc62-3ff656fea2bc
+
+### Devolver livro
+PUT http://localhost:5195/apiteste/livros/devolver/63d202c6-04b2-43a4-aae0-fb3dcb4f87bb
+
+### Livros disponíveis
+GET http://localhost:5195/apiteste/livros/disponiveis
+
+### Livros emprestados
+GET http://localhost:5195/apiteste/livros/emprestados
+
+### Ver o mais emprestado
+GET http://localhost:5195/apiteste/livros/maisemprestado
